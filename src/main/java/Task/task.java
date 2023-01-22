@@ -21,6 +21,9 @@ public class task {
                 int[] arrayTask1 = createArray();
                 task1(arrayTask1);
                 break;
+            case (2):
+                task2();
+                break;
         }
 
 
@@ -48,7 +51,29 @@ public class task {
         System.out.printf("В заданном массиве минимальное занчение - %d, а максимальное значение - %d",min, max);
     }
     public static void task2(){
-        Scanner
+        Boolean result ;
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+        /*result = (year % 100 == 0) ? false: true;
+        result = (year % 4 == 0) ? true: false;
+        result = (year % 400 == 0) ? true: false;*/
+        if (year % 400 == 0) {
+            result = true;
+        } else if (year % 100 == 0) {
+            result = false;
+
+        } else if (year % 4 == 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+        if (result == true){
+            System.out.printf("Результат - %b, введенный год - високосный", result);
+        } else {
+            System.out.printf("Результат - %b, введенный год - не високосный", result);
+        }
+
+
     }
     public static int taskNumber(){
         Scanner scan = new Scanner(System.in);
